@@ -69,16 +69,16 @@ ${answers.description}
 ### Installation:
 In order to install required dependencies, open console and run the following:
 \`\`\`${answers.installations}\`\`\`
-#Usage:
+# Usage:
 ${answers.usage}
 ### License:
 This project is licensed with:
 ${answers.license}
-###Contributing:
+### Contributing:
 ${answers.contribute}
-###Tests:
+### Tests:
 ${answers.tests}
-###Questions:
+### Questions:
 If you have any questions please feel free to contact me on [GitHub](https://github.com/${answers.username})
 Or send ${answers.author} an email using ${answers.email}
 `}
