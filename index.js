@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
-const licenseMD = require('./utils/licencseMarkDown')
+const licenseMD = require('./utils/renderBadge')
 
 const questions = () =>
     inquirer.prompt([
@@ -68,22 +68,29 @@ ${answers.description}
 * [License](#license)
 * [Contributing](#contribute)
 * [Questions](#questions)
+
 ## Installation:
 In order to install required dependencies, open console and run the following:
 \`\`\`${answers.installations}\`\`\`
+
 ## Usage:
 ${answers.usage}
+
 ## License:
-This project is licensed with:
-${answers.license}
+This project is licensed with: ${answers.license}
+
 ## Contributing:
 ${answers.contribute}
+
 ## Tests:
 ${answers.tests}
+
 ## Questions:
 If you have any questions please feel free to contact me on [GitHub](https://github.com/${answers.username})
 Or send ${answers.author} an email using ${answers.email}
-`}
+`
+}
+
 questions()
 .then((answers) => {
 fs.writeFile('NewREADME.md', generateMD(answers), (err) => {

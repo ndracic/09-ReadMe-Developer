@@ -1,25 +1,29 @@
-# Nemrin
-Academic
+# asdasd
+MIT
 ## Description:
-pleseeeee
+asf
 ## Table of Contents:
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contribute)
 * [Questions](#questions)
+
 ## Installation:
 In order to install required dependencies, open console and run the following:
-```fafas```
+```dsf```
 ## Usage:
-asdfdf
+adf
+
 ## License:
-This project is licensed with:
-Academic
+This project is licensed with: MIT
+
 ## Contributing:
-vsdvargwa
+asdf
+
 ## Tests:
-asdfasdf
+asdf
+
 ## Questions:
 If you have any questions please feel free to contact me on [GitHub](https://github.com/undefined)
-Or send nermin an email using nerm
+Or send sdfasdf an email using dsf
