@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
+const licenseMD = require('./utils/licencseMarkDown')
 
 const questions = () =>
     inquirer.prompt([
@@ -31,7 +32,7 @@ const questions = () =>
     {
         type: "list",
         message: "Any license(s) that your project should have?",
-        choices: ["MIT", 'APACHE 2.0', 'BSD 3', "GPL 3.0", "None"],
+        choices: ["MIT", 'APACHE 2.0', "Academic", 'BSD 3', "ISC", "Open", "None"],
         name: "license",
     },
     {
@@ -58,7 +59,8 @@ const questions = () =>
 
 function generateMD(answers){
 return`# ${answers.title}
-##Description
+${answers.license}
+## Description
 ${answers.description}
 ## Table of Contents:
 * [Installation](#installation)
