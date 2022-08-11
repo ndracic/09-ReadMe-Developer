@@ -61,7 +61,7 @@ function generateMD(answers){
 return`# ${answers.title}
 ${answers.license}
 ## Description
-${answers.description}
+${renderBadge(answers.description)}
 ## Table of Contents:
 * [Installation](#installation)
 * [Usage](#usage)

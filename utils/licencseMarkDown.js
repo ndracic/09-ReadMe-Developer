@@ -1,5 +1,5 @@
 //renders the license badge underneath the the generated readme Title
-function renderLicenseBadge(license) {
+function renderBadge(license) {
     if (license === "None") {
         return ""
     }
