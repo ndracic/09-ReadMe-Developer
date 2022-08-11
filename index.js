@@ -32,7 +32,7 @@ const questions = () =>
     {
         type: "list",
         message: "Any license(s) that your project should have?",
-        choices: ["MIT", 'APACHE 2.0', "Academic", 'BSD 3', "ISC", "Open", "None"],
+        choices: ["MIT", 'APACHE 2.0', "Academic", 'BSD 3', "ISC", "Mozilla", "None"],
         name: "license",
     },
     {
@@ -60,27 +60,27 @@ const questions = () =>
 function generateMD(answers){
 return`# ${answers.title}
 ${answers.license}
-## Description
-${renderBadge(answers.description)}
+## Description:
+${answers.description}
 ## Table of Contents:
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contribute)
 * [Questions](#questions)
-### Installation:
+## Installation:
 In order to install required dependencies, open console and run the following:
 \`\`\`${answers.installations}\`\`\`
-# Usage:
+## Usage:
 ${answers.usage}
-### License:
+## License:
 This project is licensed with:
 ${answers.license}
-### Contributing:
+## Contributing:
 ${answers.contribute}
-### Tests:
+## Tests:
 ${answers.tests}
-### Questions:
+## Questions:
 If you have any questions please feel free to contact me on [GitHub](https://github.com/${answers.username})
 Or send ${answers.author} an email using ${answers.email}
 `}
