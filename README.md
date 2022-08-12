@@ -41,8 +41,9 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ``` 
 ## Visuals
-![screenshot1]()
-![screenshot2]()
+![screenshot1](./imgs/screenshot1.png)
+![screenshot2](./imgs/screenshot2.png)
+Follow the link for a step by step of the application: https://drive.google.com/file/d/1rngxVU7PXzCxYhbZGal1nC2QDKzrzCOY/view
 
 ## Installation
 
@@ -51,7 +52,8 @@ To clone the repo:
     git clone
 
 ## Author 
-This app was built by Nermin Dracic.
+This command line application was built by Nermin Dracic, using Node.js with the inquirer package.
 
 ### Contact Information:
+Follow me on GitHub!
 GitHub UserName: [ndracic](https://github.com/ndracic)

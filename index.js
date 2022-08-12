@@ -31,7 +31,7 @@ const questions = () =>
     {
         type: "list",
         message: "Any license(s) that your project should have?",
-        choices: ["MIT", 'APACHE 2.0', "Academic", 'BSD 3', "ISC", "Mozilla", "None"],
+        choices: ["MIT", 'APACHE', "Boost", "Mozilla", "None"],
         name: "license",
     },
     {
@@ -63,10 +63,13 @@ function renderBadge(answers) {
         return ""
     } else if (answers === "MIT") {
         return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-    } else if (answers === "Apache 2.0") {
+    } else if (answers === "Apache") {
         return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-    } else if (answers === "Mozilla")
-        return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+    } else if (answers === "Mozilla") {
+        return "[![License](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+    } else if (answers === "Boost") {
+        return "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+    } 
 }
 
 function generateMD(answers){
