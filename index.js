@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
-const licenseMD = require('./utils/renderBadge')
 
 const questions = () =>
     inquirer.prompt([
@@ -57,9 +56,22 @@ const questions = () =>
     },
 ]);
 
+//renders the license badge underneath the the generated readme Title
+function renderBadge(answers) {
+    console.log(answers)
+    if (answers === "None") {
+        return ""
+    } else if (answers === "MIT") {
+        return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    } else if (answers === "Apache 2.0") {
+        return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    } else if (answers === "Mozilla")
+        return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+}
+
 function generateMD(answers){
 return`# ${answers.title}
-${answers.license}
+${renderBadge(answers.license)}
 ## Description:
 ${answers.description}
 ## Table of Contents:
@@ -93,7 +105,7 @@ Or send ${answers.author} an email using ${answers.email}
 
 questions()
 .then((answers) => {
-fs.writeFile('NewREADME.md', generateMD(answers), (err) => {
+fs.writeFile(`${answers.title}.md`, generateMD(answers), (err) => {
   err ? console.error(err) : console.log('Success!')
 })}
 );
